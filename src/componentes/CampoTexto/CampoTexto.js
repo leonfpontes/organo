@@ -1,6 +1,9 @@
 const CampoTexto = () => {
     return (
-        <h1>Olá input</h1>
+        <div>
+            <label>Nome</label>
+            <input />
+        </div>
     )
 
 }
