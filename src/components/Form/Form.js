@@ -13,14 +13,20 @@ export const Form = () => {
         "Mobile",
         "Inovação e Gestão"
     ]
+
+    const onSave = (event) => {
+        event.preventDefault()
+        console.log('Form foi submetido')
+    }
+
     return (
         <section className="form">
-            <form>
+            <form onSubmit={onSave}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <InputText label="Nome" placeholder="Digite seu nome"/>
-                <InputText label="Cargo" placeholder="Digite seu cargo"/>
-                <InputText label="Imagem" placeholder="Informe o endereço da imagem"/>
-                <Select label="Time" item={squad}/>
+                <InputText mandatory={true} label="Nome" placeholder="Digite seu nome"/>
+                <InputText mandatory={true} label="Cargo" placeholder="Digite seu cargo"/>
+                <InputText mandatory={true} label="Imagem" placeholder="Informe o endereço da imagem"/>
+                <Select mandatory={true} label="Time" item={squad}/>
                 <Button>Criar Card</Button>
             </form>
         </section>
