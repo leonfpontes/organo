@@ -4,7 +4,7 @@ import { Select } from "../Select/Select"
 import { Button } from "../Button/Button"
 import { useState } from "react"
 
-export const Form = () => {
+export const Form = (props) => {
     //CRIANDO LISTA DO SELECT PARA PASSAR POR PARÂMETRO DE CRIAÇÃO DO COMPONENTE
     const squad = [
         "Programação",
@@ -25,7 +25,12 @@ export const Form = () => {
     // CAPTURANDO EVENTO DO SUBMIT DO FORMULÁRIO
     const onSave = (event) => {
         event.preventDefault()
-        console.log('Form foi submetido => ', getName, getPosition, getImage, getSquad)
+        props.toProfessional({
+            getName,
+            getPosition,
+            getImage,
+            getSquad
+        })
     }
 
     return (
