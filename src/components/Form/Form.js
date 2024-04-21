@@ -1,6 +1,7 @@
 import "./Form.css"
 import InputText from "../InputText"
 import { Select } from "../Select/Select"
+import { Button } from "../Button/Button"
 
 export const Form = () => {
     const squad = [
@@ -20,6 +21,7 @@ export const Form = () => {
                 <InputText label="Cargo" placeholder="Digite seu cargo"/>
                 <InputText label="Imagem" placeholder="Informe o endereço da imagem"/>
                 <Select label="Time" item={squad}/>
+                <Button>Criar Card</Button>
             </form>
         </section>
     )
