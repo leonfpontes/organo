@@ -7,8 +7,15 @@ export const InputText = (props) => {
     }
     return (
         <div className="input-text">
-            <label>{props.label}</label>
-            <input value={props.valor} onChange={onType} required={props.mandatory} placeholder={props.placeholder} />
+            <label>
+                {props.label}
+            </label>
+            <input 
+                value={props.valor} 
+                onChange={onType} 
+                required={props.mandatory} 
+                placeholder={props.placeholder} 
+            />
         </div>
     )
 
