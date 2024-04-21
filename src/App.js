@@ -1,11 +1,11 @@
 import Banner from './componentes/Banner';
-import Formulario from './componentes/Formulario';
+import Form from './componentes/Form';
 
 function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario />
+      <Form />
     </div>
   );
 }

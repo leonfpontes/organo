@@ -1,8 +1,8 @@
-import "./CampoTexto.css"
+import "./InputText.css"
 
-export const CampoTexto = (props) => {
+export const InputText = (props) => {
     return (
-        <div class="campo-texto">
+        <div class="input-text">
             <label>{props.label}</label>
             <input placeholder={props.placeholder} />
         </div>
