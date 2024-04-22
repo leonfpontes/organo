@@ -1,15 +1,17 @@
 .footer {
     display: flex;
-    background-color: #6278F7;
     align-items: center;
     justify-content: space-around;
-    padding: 50px;
+    padding: 60px;
+    background: #6278F7 url("/public/images/fundo.png") no-repeat top;
 }
 
 .footer-social-media {
     display: flex;
     justify-content: space-between;
-    gap: 32px
+    gap: 32px;
+    max-width: 100%;
+    max-height: 50px;
 }
 
 .footer p {

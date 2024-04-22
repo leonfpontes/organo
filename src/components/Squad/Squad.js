@@ -9,7 +9,7 @@ export const Squad = (props) => {
         <section className="squadBanner" style={sectionCss}>
             <h3 style={{ borderColor: props.primaryColor }}>{props.squadName}</h3>
             <div className="professionals">
-                {props.professionals.map(professional => <Professional name={professional.name} position={professional.position} image={professional.image} />)}
+                {props.professionals.map(professional => <Professional corDeFundo={props.primaryColor} key={professional.name} name={professional.name} position={professional.position} image={professional.image} />)}
             </div>
         </section>
         : ''
