@@ -1,25 +1,25 @@
-import "./Form.css"
+import { useState } from "react"
+import { Button } from "../Button/Button"
 import InputText from "../InputText"
 import { Select } from "../Select/Select"
-import { Button } from "../Button/Button"
-import { useState } from "react"
+import "./Form.css"
 
 export const Form = (props) => {
 
     // GET E SET DE VALORES DOS CAMPOS (ARMAZENANDO ESTADOS COM REACT)
-    const [getName, setName] = useState('')
-    const [getPosition, setPosition] = useState('')
-    const [getImage, setImage] = useState('')
-    const [getSquad, setSquad] = useState('')
+    const [name, setName] = useState('')
+    const [position, setPosition] = useState('')
+    const [image, setImage] = useState('')
+    const [squad, setSquad] = useState('')
 
     // CAPTURANDO EVENTO DO SUBMIT DO FORMULÁRIO
     const onSave = (event) => {
         event.preventDefault()
         props.toProfessional({
-            getName,
-            getPosition,
-            getImage,
-            getSquad
+            name,
+            position,
+            image,
+            squad
         })
     }
 
@@ -31,28 +31,28 @@ export const Form = (props) => {
                     mandatory={true} 
                     label="Nome" 
                     placeholder="Digite seu nome"
-                    value={getName} //pega valor do campo
+                    value={name} //pega valor do campo
                     onChange={valor => setName(valor)} //atualiza o novo valor do campo
                 />
                 <InputText 
                     mandatory={true} 
                     label="Cargo" 
                     placeholder="Digite seu cargo"
-                    value={getPosition}
+                    value={position}
                     onChange={valor => setPosition(valor)}
                     />
                 <InputText 
                     mandatory={true} 
                     label="Imagem" 
                     placeholder="Informe o endereço da imagem"
-                    value={getImage}
+                    value={image}
                     onChange={valor => setImage(valor)}
                     />
                 <Select 
                     mandatory={true} 
                     label="Time" 
                     item={props.squads}
-                    value={getSquad}
+                    value={squad}
                     onChange={valor => setSquad(valor)}
                 />
                 <Button>Criar Card</Button>

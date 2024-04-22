@@ -8,9 +8,7 @@ export const Squad = (props) => {
         <section className="squadBanner" style={sectionCss}>
             <h3 style={{ borderColor: props.primaryColor }}>{props.squadName}</h3>
             <div className="professionals">
-
-                {/* {props.professional.map((professional) => name={professional.nome} position={professional.position} image={professional.image})} */}
-                <Professional name={'Leonardo Pontes'} position={'Programmer'} image={'https://lh3.googleusercontent.com/a/ACg8ocIkhKwyqztfjlcptNFIiBSY5r7bhr5Dc1MglwV1gir_rHvXgnG6Cg=s288-c-no'}/>
+                {props.professionals.map(professional => <Professional name={professional.name} position={professional.position} image={professional.image} />)}
             </div>
         </section>
     )
