@@ -5,7 +5,6 @@ import { Select } from "../Select/Select"
 import "./Form.css"
 
 export const Form = (props) => {
-
     // GET E SET DE VALORES DOS CAMPOS (ARMAZENANDO ESTADOS COM REACT)
     const [name, setName] = useState('')
     const [position, setPosition] = useState('')
@@ -20,7 +19,7 @@ export const Form = (props) => {
             position,
             image,
             squad
-        })
+        }) 
         setName('')
         setPosition('')
         setImage('')
