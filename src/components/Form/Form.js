@@ -5,16 +5,6 @@ import { Button } from "../Button/Button"
 import { useState } from "react"
 
 export const Form = (props) => {
-    //CRIANDO LISTA DO SELECT PARA PASSAR POR PARÂMETRO DE CRIAÇÃO DO COMPONENTE
-    const squad = [
-        "Programação",
-        "Front-End",
-        "Data Science",
-        "Devops",
-        "UX e Design",
-        "Mobile",
-        "Inovação e Gestão"
-    ]
 
     // GET E SET DE VALORES DOS CAMPOS (ARMAZENANDO ESTADOS COM REACT)
     const [getName, setName] = useState('')
@@ -61,7 +51,7 @@ export const Form = (props) => {
                 <Select 
                     mandatory={true} 
                     label="Time" 
-                    item={squad}
+                    item={props.squads}
                     value={getSquad}
                     onChange={valor => setSquad(valor)}
                 />

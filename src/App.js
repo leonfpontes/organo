@@ -52,8 +52,18 @@ const toNewProfessional = (professional) => {
   return (
     <div className="App">
       <Banner />
-      <Form toProfessional={professional => toNewProfessional(professional)} />
-      {squads.map(squad => <Squad key={squad.name} squadName={squad.name} primaryColor={squad.primaryColor} secondaryColor={squad.secondaryColor}/>)}
+      <Form 
+        squads={squads.map(squad => squad.name)} 
+        toProfessional={professional => toNewProfessional(professional)} 
+      />
+      {squads.map((squad) => 
+        <Squad 
+          key={squad.name} 
+          squadName={squad.name} 
+          primaryColor={squad.primaryColor} 
+          secondaryColor={squad.secondaryColor}
+        />)
+      }
     </div>
   );
 }
