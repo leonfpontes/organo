@@ -53,7 +53,7 @@ const toNewProfessional = (professional) => {
     <div className="App">
       <Banner />
       <Form 
-        squads={squads.map(squad => squad.name)} 
+        squads={squads.map((squad) => squad.name)} 
         toProfessional={professional => toNewProfessional(professional)} 
       />
       {squads.map((squad) => 
@@ -62,7 +62,7 @@ const toNewProfessional = (professional) => {
           squadName={squad.name} 
           primaryColor={squad.primaryColor} 
           secondaryColor={squad.secondaryColor}
-          professionals={professionals.filter(professional => professional.squad === squad.name)}
+          professionals={professionals.filter((professional) => professional.squad === squad.name)}
         />)
       }
     </div>
