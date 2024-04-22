@@ -1,8 +1,8 @@
-import "./Form.css"
+import { useState } from "react"
+import { Button } from "../Button/Button"
 import InputText from "../InputText"
 import { Select } from "../Select/Select"
-import { Button } from "../Button/Button"
-import { useState } from "react"
+import "./Form.css"
 
 export const Form = (props) => {
 
@@ -21,6 +21,10 @@ export const Form = (props) => {
             getImage,
             getSquad
         })
+        setName('')
+        setPosition('')
+        setImage('')
+        setSquad('')
     }
 
     return (

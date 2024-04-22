@@ -1,7 +1,7 @@
+import { useState } from "react"
 import Banner from './components/Banner';
 import Form from './components/Form';
 import Squad from './components/Squad';
-import { useState } from "react"
 
 function App() {
 
@@ -62,6 +62,7 @@ const toNewProfessional = (professional) => {
           squadName={squad.name} 
           primaryColor={squad.primaryColor} 
           secondaryColor={squad.secondaryColor}
+          professionals={professionals.filter(professional => professional.squad === squad.name)}
         />)
       }
     </div>
