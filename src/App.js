@@ -1,4 +1,5 @@
 import Banner from './components/Banner';
+import Footer from './components/Footer';
 import Form from './components/Form';
 import Squad from './components/Squad';
 import { useState } from "react"
@@ -65,6 +66,7 @@ const toNewProfessional = (professional) => {
           professionals={professionals.filter((professional) => professional.squad === squad.name)}
         />)
       }
+    <Footer />
     </div>
   );
 }
